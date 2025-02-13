@@ -1,9 +1,11 @@
-import ArrowCTA from "@/components/ArrowCTA";
+import ArrowCTA from "@/components/sections/CTAs/ArrowCTA";
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col pt-16 gap-20">
-      <div className="container text-5xl">Siebe Animation playground</div>
+    <main className="min-h-screen flex flex-col">
+      <div className="container flex">
+        Siebe Animation playground (Sections here)
+      </div>
       <ArrowCTA />
     </main>
   );
