@@ -10,14 +10,14 @@ export default function ArrowCTA() {
   return (
     <div
       ref={containerRef}
-      className="w-full bg-zinc-800 grid grid-cols-10 grid-rows-6 relative"
+      className="w-full bg-zinc-900 grid grid-cols-10 grid-rows-6 relative"
     >
       {Array.from({ length: 60 }).map((_, i) => {
         return <Arrow key={i} mouseX={x} mouseY={y} />;
       })}
       <a
         href="#"
-        className="text-[11vw] m-0 text-white hover:text-zinc-700 bg-zinc-800 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-colors duration-300"
+        className="text-[11vw] m-0 text-white hover:text-zinc-700 bg-zinc-900 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-colors duration-300"
       >
         Play
       </a>
