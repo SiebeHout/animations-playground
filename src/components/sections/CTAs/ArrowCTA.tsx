@@ -1,4 +1,6 @@
 "use client";
+// inspired from https://www.wheregiantsroam.co.uk/
+
 import { useRef } from "react";
 import { motion } from "motion/react";
 import { useMousePosition } from "@/lib/use-mouse-position";
@@ -8,7 +10,7 @@ export default function ArrowCTA() {
   const { x, y } = useMousePosition();
 
   return (
-    <div
+    <section
       ref={containerRef}
       className="w-full bg-zinc-900 grid grid-cols-10 grid-rows-6 relative"
     >
@@ -21,7 +23,7 @@ export default function ArrowCTA() {
       >
         Play
       </a>
-    </div>
+    </section>
   );
 }
 

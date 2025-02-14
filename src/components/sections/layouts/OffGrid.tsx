@@ -1,5 +1,7 @@
 "use client";
 
+// inspired from https://lusion.co/
+
 import { useRef } from "react";
 import { easeInOut } from "motion/react";
 import { motion, useScroll, useTransform } from "motion/react";
@@ -14,7 +16,7 @@ const data = {
 };
 
 export default function OffGrid() {
-  const containerRef = useRef(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start center", "0"],
