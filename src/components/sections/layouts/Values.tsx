@@ -82,7 +82,9 @@ export default function Values() {
               key={index}
               className="p-5 bg-white w-full rounded-lg flex flex-col gap-3"
             >
-              <h3 className="text-3xl">{content.title}</h3>
+              <h3 className="text-xl md:text-2xl xl:text-3xl">
+                {content.title}
+              </h3>
               <p>{content.body}</p>
             </motion.div>
           ))}
