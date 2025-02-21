@@ -76,8 +76,6 @@ const data = {
   ],
 };
 
-//grid gebruiken, desktop eerst
-
 export default function CardRowGridV2() {
   return (
     <section className="w-full flex flex-col gap-8">
@@ -120,20 +118,22 @@ export default function CardRowGridV2() {
 
 export function FundCard({ fund }: { fund: Fund }) {
   return (
-    <div className="group grid grid-cols-12 w-full mx-auto border-black border-t last:border-b hover:bg-zinc-700 hover:text-white transition-all duration-500 ease-in-out">
-      <div className="col-span-1 bg-black relative min-h-64 w-[500px] group-hover:[clip-path:polygon(0_0,100%_0%,100%_100%,0%_100%)] [clip-path:polygon(0_0,0_0,0_100%,0%_100%)] transition-all duration-500">
-        <Image fill src={fund.image} alt="image" objectFit="cover" />
+    <div className="group grid grid-cols-1 md:grid-cols-12 w-full mx-auto border-black border-t last:border-b hover:bg-zinc-700 hover:text-white transition-all duration-500 ease-in-out">
+      <div className="col-span-1 md:col-span-1 bg-black relative h-48 md:h-64 w-full md:w-[300px] xl:w-[500px] md:group-hover:[clip-path:polygon(0_0,100%_0%,100%_100%,0%_100%)] md:[clip-path:polygon(0_0,0_0,0_100%,0%_100%)] transition-all duration-500 object-cover">
+        <Image fill src={fund.image} alt="Fund image" />
       </div>
-      <div className="col-span-4 transform -translate-x-8 group-hover:translate-x-[300px] transition-all duration-500 flex">
-        <div className="flex pl-24 flex-col pt-6">
+      <div className="col-span-1 md:col-span-4 md:transform md:-translate-x-4 xl:translate-x-8 md:group-hover:translate-x-[150px] xl:group-hover:translate-x-[300px] transition-all duration-500 flex">
+        <div className="flex pl-4 md:pl-24 flex-col pt-6">
           <p className="text-xs">
             {fund.themes.toString().replaceAll(",", " | ")}
           </p>
           <h3 className="text-xl text-balance">{fund.title}</h3>
         </div>
       </div>
-      <p className="text-xs col-start-8 col-span-2 pt-6">{fund.text}</p>
-      <div className="flex flex-col col-span-2 items-end pt-6">
+      <p className="text-xs col-span-1 md:col-start-8 md:col-span-2 pt-6 px-4 md:px-0">
+        {fund.text}
+      </p>
+      <div className="flex flex-col col-span-1 md:col-span-2 items-end pt-6 pr-4 md:pr-0">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="32"
