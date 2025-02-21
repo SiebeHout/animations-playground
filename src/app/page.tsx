@@ -7,7 +7,10 @@ import Advisors from "@/components/sections/layouts/Advisors";
 // import DisappearCarousel from "@/components/sections/layouts/DisappearCarousel";
 import Anime from "@/components/sections/layouts/Anime";
 // import CardRowGrid from "@/components/sections/layouts/CardRowGrid";
-import CardRowGridV2 from "@/components/sections/layouts/CardRowGridV2";
+// import CardRowGridV2 from "@/components/sections/layouts/CardRowGridV2";
+import StickyFooter, {
+  ExampleFooter,
+} from "@/components/sections/layouts/StickyFooter";
 
 export default function Home() {
   return (
@@ -15,9 +18,9 @@ export default function Home() {
       <div className="container flex">
         Siebe Animation playground (scroll down)
       </div>
-      <CardRowGridV2 />
-      {/* <DisappearCarousel /> */}
       <div className="h-screen"></div>
+      {/* <CardRowGridV2 /> */}
+      {/* <DisappearCarousel /> */}
       <Anime />
       <FunClickSection />
       <MoodChanger />
@@ -26,6 +29,9 @@ export default function Home() {
       <Advisors />
 
       <ArrowCTA />
+      <StickyFooter className="h-[200px] md:h-[300px] xl:h-[600px] bg-zinc-500 text-zinc-800">
+        <ExampleFooter />
+      </StickyFooter>
     </main>
   );
 }
