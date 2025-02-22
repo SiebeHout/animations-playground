@@ -11,13 +11,16 @@ import Anime from "@/components/sections/layouts/Anime";
 import StickyFooter, {
   ExampleFooter,
 } from "@/components/sections/layouts/StickyFooter";
+import ElementMouseHover from "@/components/sections/layouts/ElementMouseHover";
+import { CursorTrigger, CursorContent } from "@/components/cursor";
 
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col">
-      <div className="container flex">
+      <div className="container flex mb-8">
         Siebe Animation playground (scroll down)
       </div>
+      <ElementMouseHover />
       <div className="h-screen"></div>
       {/* <CardRowGridV2 /> */}
       {/* <DisappearCarousel /> */}
@@ -27,7 +30,6 @@ export default function Home() {
       <OffGrid />
       <Values />
       <Advisors />
-
       <ArrowCTA />
       <StickyFooter className="h-[200px] md:h-[300px] xl:h-[600px] bg-zinc-500 text-zinc-800">
         <ExampleFooter />
