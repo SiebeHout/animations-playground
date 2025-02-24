@@ -12,17 +12,14 @@ import StickyFooter, {
   ExampleFooter,
 } from "@/components/sections/layouts/StickyFooter";
 import ElementMouseHover from "@/components/sections/layouts/ElementMouseHover";
-import {
-  CursorTrigger,
-  CursorContent,
-} from "@/components/cursor/cursor-content";
-
+import CarouselExample from "@/components/sections/layouts/CarouselExample";
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col">
       <div className="container flex mb-8">
         Siebe Animation playground (scroll down)
       </div>
+      <CarouselExample />
       <ElementMouseHover />
 
       <div className="h-screen"></div>
