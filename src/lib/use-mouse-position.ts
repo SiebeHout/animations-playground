@@ -1,5 +1,4 @@
 import { RefObject, useEffect, useState } from "react";
-
 export const useMousePosition = (
   containerRef?: RefObject<HTMLElement | null>
 ) => {

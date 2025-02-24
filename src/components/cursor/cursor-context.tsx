@@ -35,13 +35,24 @@ export const CursorProvider: React.FC<CursorProviderProps> = ({
   const [cursors, setCursors] = useState<Record<string, CursorState>>({});
 
   const setCursorState = (id: string, state: Partial<CursorState>) => {
-    setCursors((prev) => ({
-      ...prev,
-      [id]: {
-        ...prev[id],
-        ...state,
-      },
-    }));
+    setCursors((prev) => {
+      const current = prev[id];
+      // Only update if values actually changed
+      if (
+        current?.isVisible === state.isVisible &&
+        current?.initialPosition?.x === state.initialPosition?.x &&
+        current?.initialPosition?.y === state.initialPosition?.y
+      ) {
+        return prev;
+      }
+      return {
+        ...prev,
+        [id]: {
+          ...current,
+          ...state,
+        },
+      };
+    });
   };
 
   return (

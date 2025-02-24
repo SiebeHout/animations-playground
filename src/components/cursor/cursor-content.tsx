@@ -1,7 +1,7 @@
 "use client";
 
 import type React from "react";
-import { type ReactNode } from "react";
+import { memo, type ReactNode } from "react";
 import {
   motion,
   AnimatePresence,
@@ -31,13 +31,13 @@ const defaultTransition = {
   ease: "easeOut",
 };
 
-export const CursorContent: React.FC<CursorContentProps> = ({
+export const CursorContent = memo(function CursorContent({
   children,
   cursorId,
   variants = defaultVariants,
   transition = defaultTransition,
   className,
-}) => {
+}: CursorContentProps) {
   const { cursors } = useCursor();
   const mousePosition = useMousePosition();
   const cursorState = cursors[cursorId];
@@ -85,4 +85,4 @@ export const CursorContent: React.FC<CursorContentProps> = ({
       )}
     </AnimatePresence>
   );
-};
+});
