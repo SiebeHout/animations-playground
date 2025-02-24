@@ -12,7 +12,10 @@ import StickyFooter, {
   ExampleFooter,
 } from "@/components/sections/layouts/StickyFooter";
 import ElementMouseHover from "@/components/sections/layouts/ElementMouseHover";
-import { CursorTrigger, CursorContent } from "@/components/cursor";
+import {
+  CursorTrigger,
+  CursorContent,
+} from "@/components/cursor/cursor-content";
 
 export default function Home() {
   return (
@@ -21,7 +24,9 @@ export default function Home() {
         Siebe Animation playground (scroll down)
       </div>
       <ElementMouseHover />
+
       <div className="h-screen"></div>
+
       {/* <CardRowGridV2 /> */}
       {/* <DisappearCarousel /> */}
       <Anime />
